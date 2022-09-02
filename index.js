@@ -22,7 +22,7 @@ const twitterClient = new TwitterClient({
 });
 
 // Create the GitHub client
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 const main = async () => {
   const labelsAndStars = await Promise.all(
