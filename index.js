@@ -39,9 +39,14 @@ const main = async () => {
 
   // Sort the frameworks by the number of stars
   const sortedByStars = labelsAndStars.sort((a, b) => b.stars - a.stars);
+  // Date in the format: dd/mm/yyyy
+  const date = new Date();
+  const formattedDate = `${date.getDate()}/${
+    date.getMonth() + 1
+  }/${date.getFullYear()}`;
 
   // Compose the tweet
-  const tweet = `✨ Frameworks de JavaScript ordenados por estrellas en GitHub:
+  const tweet = `✨ Frameworks de JavaScript más populares en GitHub el ${formattedDate}:
 
 ${sortedByStars
   .map(({ label, stars }, index) => `${index + 1} • ${label}: ${stars} ⭐️`)
@@ -51,7 +56,7 @@ ${sortedByStars
 `;
 
   console.log(tweet);
-  console.log(tweet.length);
+  console.log(`Count: ${tweet.length}`);
 
   try {
     // Send the tweet
