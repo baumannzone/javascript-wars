@@ -1,6 +1,6 @@
 # JavaScript Wars
 
-![](https://img.shields.io/badge/JavaScript-ES6-green.svg)
+![](https://img.shields.io/badge/JavaScript-ES6-green.svg) [![Tweet Cron](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml/badge.svg)](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml)
 
 ![](img/logo.png)
 
