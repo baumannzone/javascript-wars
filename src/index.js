@@ -1,9 +1,9 @@
-import { TwitterClient } from "twitter-api-client";
-import { Octokit } from "@octokit/core";
-import dotenv from "dotenv";
+const TwitterClient = require("twitter-api-client").TwitterClient;
+const Octokit = require("@octokit/core").Octokit;
+const dotenv = require("dotenv");
 dotenv.config();
 
-// JavaScript repos that are popular on GitHub
+// JavaScript repos
 const FRAMEWORKS = [
   { owner: "vuejs", repo: "vue" },
   { owner: "vercel", repo: "next.js" },
@@ -24,21 +24,39 @@ const twitterClient = new TwitterClient({
 // Create the GitHub client
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
-const main = async () => {
+/**
+ * Get the labels and stars of the given repositories in GitHub with the Octokit client
+ * @param {Array} frameworks - Array of objects with the owner and repo properties
+ * @returns {Array} Array of objects with the label (name) and stars properties
+ */
+const getGhLabelsAndStars = async (frameworks) => {
   const labelsAndStars = await Promise.all(
-    FRAMEWORKS.map(async ({ owner, repo }) => {
-      // https://docs.github.com/es/rest/repos/repos#get-a-repository
-      const response = await octokit.request("GET /repos/{owner}/{repo}", {
+    frameworks.map(async (framework) => {
+      const { owner, repo } = framework;
+      const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
         owner,
         repo,
       });
-      const { stargazers_count: stars, name: label } = response.data;
+      const { stargazers_count: stars, name: label } = data;
       return { label, stars };
     })
   );
+  return labelsAndStars;
+};
+
+/**
+ * Sort the array of objects by the number of stars
+ * @param {Array} data Array of objects with the label (name) and stars properties
+ * @returns
+ */
+const sortByStars = (data) => data.sort((a, b) => b.stars - a.stars);
+
+const main = async () => {
+  const labelsAndStars = await getGhLabelsAndStars(FRAMEWORKS);
 
   // Sort the frameworks by the number of stars
-  const sortedByStars = labelsAndStars.sort((a, b) => b.stars - a.stars);
+  const sortedByStars = sortByStars(labelsAndStars);
+
   // Date in the format: dd/mm/yyyy
   const date = new Date();
   const formattedDate = `${date.getDate()}/${
@@ -68,3 +86,9 @@ ${sortedByStars
 };
 
 main();
+
+module.exports = {
+  main,
+  getGhLabelsAndStars,
+  sortByStars,
+};

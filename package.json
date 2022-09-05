@@ -1,20 +1,24 @@
 {
-  "type": "module",
-  "devDependencies": {
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "2.7.1"
-  },
   "scripts": {
     "start": "node index.js",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "dependencies": {
     "@octokit/core": "^4.0.5",
     "dotenv": "^16.0.2",
     "twitter-api-client": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-jest": "^29.0.2",
+    "husky": "^8.0.1",
+    "jest": "^29.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
