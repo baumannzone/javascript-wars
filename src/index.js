@@ -70,8 +70,7 @@ ${sortedByStars
   .map(({ label, stars }, index) => `${index + 1} • ${label}: ${stars} ⭐️`)
   .join("\n")}
 
-#JavaScriptBot #JavaScriptWars
-`;
+#JavaScriptBot #JavaScriptWars #GitHub #JavaScript #NodeJS`;
 
   console.log(tweet);
   console.log(`Count: ${tweet.length}`);
