@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-![](https://img.shields.io/badge/JavaScript-ES6-green.svg) [![Tweet Cron](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml/badge.svg)](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml)
+![js es6](https://img.shields.io/badge/JavaScript-ES6-green.svg) [![Daily Tweet](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml/badge.svg)](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml)
 
 ## Description
 
