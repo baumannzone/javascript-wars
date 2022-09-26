@@ -15,7 +15,7 @@ Bot for the [JavaScript Wars](https://twitter.com/JavaScriptWars) Twitter accoun
 1. Clone the repo
 2. `npm i`
 3. `cp .env.example .env`
-4. Fill in the `.env` file with your Twitter API keys
+4. Fill in the `.env` file
 5. `npm start`
 
 ## Contributors ✨
