@@ -6,7 +6,7 @@
 
 ## Description
 
-Bot for the [JavaScript Wars](https://twitter.com/JavaScriptWars) Twitter account.
+Bot for the [JavaScript Wars](https://twitter.com/JavaScriptWars) Twitter account. Daily tweets ranking the most popular JavaScript frontend frameworks.
 
 ## Setup
 
