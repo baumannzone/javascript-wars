@@ -2,11 +2,10 @@
 
 ![](https://img.shields.io/badge/JavaScript-ES6-green.svg) [![Tweet Cron](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml/badge.svg)](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml)
 
-![](img/logo.png)
-
 ## Description
 
 Bot for the [JavaScript Wars](https://twitter.com/JavaScriptWars) Twitter account. Daily tweets ranking the most popular JavaScript frontend frameworks.
+![logo](img/logo.png)
 
 ## Setup
 
