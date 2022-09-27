@@ -1,6 +1,9 @@
 # JavaScript Wars
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![](https://img.shields.io/badge/JavaScript-ES6-green.svg) [![Tweet Cron](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml/badge.svg)](https://github.com/baumannzone/javascript-wars/actions/workflows/main.yml)
@@ -16,7 +19,14 @@ Bot for the [JavaScript Wars](https://twitter.com/JavaScriptWars) Twitter accoun
 2. `npm i`
 3. `cp .env.example .env`
 4. Fill in the `.env` file with your Twitter API keys
+
+## Run
+
 5. `npm start`
+
+## Test
+
+6. `npm run test`
 
 ## Contributors ✨
 
