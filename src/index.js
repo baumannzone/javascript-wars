@@ -13,6 +13,15 @@ const FRAMEWORKS = [
   { owner: "sveltejs", repo: "svelte" },
 ];
 
+const MAP_NAMES = {
+  vue: "Vue",
+  "next.js": "Next.js",
+  react: "React",
+  angular: "Angular",
+  "nuxt.js": "Nuxt.js",
+  svelte: "Svelte",
+};
+
 // Create the Twitter client
 const twitterClient = new TwitterClient({
   apiKey: process.env.API_KEY,
@@ -67,7 +76,10 @@ const main = async () => {
   const tweet = `✨ Frameworks de JavaScript más populares en GitHub el ${formattedDate}:
 
 ${sortedByStars
-  .map(({ label, stars }, index) => `${index + 1} • ${label}: ${stars} ⭐️`)
+  .map(
+    ({ label, stars }, index) =>
+      `${index + 1} · ${MAP_NAMES[label]}: ${stars} ⭐️`
+  )
   .join("\n")}
 
 #JavaScriptBot #JavaScriptWars #GitHub #JavaScript #NodeJS`;
