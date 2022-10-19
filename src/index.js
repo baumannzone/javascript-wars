@@ -89,7 +89,7 @@ ${sortedByStars
 
   try {
     // Send the tweet
-    // await twitterClient.tweets.statusesUpdate({ status: tweet });
+    await twitterClient.tweets.statusesUpdate({ status: tweet });
     console.log("Tweeted!");
   } catch (error) {
     console.log("Twitter client error", error);
