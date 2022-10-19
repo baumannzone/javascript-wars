@@ -73,7 +73,7 @@ const main = async () => {
   }/${date.getFullYear()}`;
 
   // Compose the tweet
-  const tweet = `✨ Frameworks de JavaScript más populares en GitHub el ${formattedDate}:
+  const tweet = `✨ Frameworks de JavaScript más populares en GitHub [${formattedDate}]:
 
 ${sortedByStars
   .map(
@@ -82,7 +82,7 @@ ${sortedByStars
   )
   .join("\n")}
 
-#JavaScriptBot #JavaScriptWars #GitHub #JavaScript #NodeJS`;
+#GitHub #JavaScript #NodeJS`;
 
   console.log(tweet);
   console.log(`Count: ${tweet.length}`);
