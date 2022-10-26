@@ -76,13 +76,10 @@ const main = async () => {
   const tweet = `✨ Frameworks de #JavaScript más populares en GitHub [${formattedDate}]:
 
 ${sortedByStars
-  .map(
-    ({ label, stars }, index) =>
-      `${index + 1} · ${MAP_NAMES[label]}: ${stars} ⭐️`
-  )
+  .map(({ label, stars }, index) => `▻ ${MAP_NAMES[label]}: ${stars} ⭐️`)
   .join("\n")}
 
-#GitHub #FrontEnd #NodeJS`;
+#github #frontend #nodejs`;
 
   console.log(tweet);
   console.log(`Count: ${tweet.length}`);
