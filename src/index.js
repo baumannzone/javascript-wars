@@ -9,7 +9,7 @@ const FRAMEWORKS = [
   { owner: "vercel", repo: "next.js" },
   { owner: "facebook", repo: "react" },
   { owner: "angular", repo: "angular" },
-  { owner: "nuxt", repo: "nuxt.js" },
+  { owner: "nuxt", repo: "nuxt" },
   { owner: "sveltejs", repo: "svelte" },
 ];
 
@@ -18,7 +18,7 @@ const MAP_NAMES = {
   "next.js": "Next.js",
   react: "React",
   angular: "Angular",
-  "nuxt.js": "Nuxt.js",
+  nuxt: "Nuxt",
   svelte: "Svelte",
 };
 
